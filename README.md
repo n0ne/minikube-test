@@ -24,7 +24,7 @@
 - `kubectl describe pods <pod-name>` - command is used to retrieve detailed information about a specific pod in a Kubernetes cluster.
 - `kubectl describe service short-app-port` - command is used to retrieve detailed information about a specific service in a Kubernetes cluster. 
 - `kubectl logs <pod-name>` - command is used to retrieve the logs of a specific pod in a Kubernetes cluster.
-
+- `kubectl run my-pod --image=<docker-image-name> --labels="components=frontend"` - command is used to create and run a particular image on the cluster. 
 
 - `kubectl port-forward --address 0.0.0.0 -n default service/<service-name> 31200:3000` - command is used to forward Kubernetes services to a set of local ports. I don't know why, but my minikube cluster has IP `192.168.49.2`. I need this port forward to access it locally.
 
@@ -36,4 +36,3 @@
 - `minikube ip` - get IP address of cluster minikube
 - `minikube dashboard` - command is used to open the Kubernetes Dashboard for the Minikube cluster. The Kubernetes Dashboard is a web-based user interface that provides insights into the state of your Kubernetes cluster, allowing you to view and manage various resources.
 - `minikube service <service-name>` - command allows you to access a service exposed within your Minikube cluster. This command opens the specified service in your default web browser.
-- 
