@@ -20,6 +20,7 @@
 - `kubectl get pods` - command is used to list all the pods in the current Kubernetes context. It provides information about the pods, including their names, statuses, and other details.
 - `kubectl get services` - command is used to retrieve information about Kubernetes services in the current context or namespace. It provides a list of services, including details such as service names, cluster IP addresses, external IP addresses (if applicable), ports, and their corresponding selectors.
 - `kubectl get all` - command is used to retrieve information about all resources in the current namespace. 
+- `kubectl get ingress` - this will display a list of Ingress resources along with their details, including the NAME, HOSTS, ADDRESS, PORTS, and AGE.
 - `kubectl get deployments.apps` -  command is used to retrieve information about Deployments in the current namespace. 
 - `kubectl delete pod <pod-name>` - delete the pod with specified name
 - `kubectl delete service short-app-port` - delete the service with name `short-app-port`
@@ -43,3 +44,5 @@
 - `minikube dashboard` - command is used to open the Kubernetes Dashboard for the Minikube cluster. The Kubernetes Dashboard is a web-based user interface that provides insights into the state of your Kubernetes cluster, allowing you to view and manage various resources.
 - `minikube service <service-name>` - command allows you to access a service exposed within your Minikube cluster. This command opens the specified service in your default web browser.
 - `minikube tunnel` - command is used to create a route to services deployed in a Minikube cluster. It sets up a network tunnel to expose LoadBalancer services to your local machine. This is especially useful when you have services of type LoadBalancer that you want to access from your local environment.
+- `minikube addons list` - this command will display a list of available addons along with their status (enabled or disabled).
+- ` minikube addons enable <addon-name>` - enable minikube addon
