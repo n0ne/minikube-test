@@ -33,6 +33,8 @@
 - `kubectl set image deployment.app/<deployment-name> <container-name> =<docker-image-name>` - the command you provided is used to update the container image of a deployment in Kubernetes.
 - `kubectl run my-pod --image=<docker-image-name> --labels="components=frontend"` - command is used to create and run a particular image on the cluster. 
 - `kubectl port-forward --address 0.0.0.0 -n default service/<service-name> 31200:3000` - command is used to forward Kubernetes services to a set of local ports. I don't know why, but my minikube cluster has IP `192.168.49.2`. I need this port forward to access it locally.
+- `kubectl get storageclasses.storage.k8s.io` - this command will display a list of storage classes along with their properties. If there are no storage classes created, the output will be empty.
+- `kubectl get persistentvolumeclaims` - this command will display information about the existing PVCs, including their names, status, volume, and other relevant details. Make sure to run this command in the context of the Kubernetes cluster you're interested in.
 
 
 #### Munukube commands
