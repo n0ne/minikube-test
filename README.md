@@ -35,6 +35,12 @@
 - `kubectl port-forward --address 0.0.0.0 -n default service/<service-name> 31200:3000` - command is used to forward Kubernetes services to a set of local ports. I don't know why, but my minikube cluster has IP `192.168.49.2`. I need this port forward to access it locally.
 - `kubectl get storageclasses.storage.k8s.io` - this command will display a list of storage classes along with their properties. If there are no storage classes created, the output will be empty.
 - `kubectl get persistentvolumeclaims` - this command will display information about the existing PVCs, including their names, status, volume, and other relevant details. Make sure to run this command in the context of the Kubernetes cluster you're interested in.
+- `kubectl create secret generic pg-secret --from-literal PASSWORD=my_pass` - fter running this command, a secret named pg-secret will be created in the default namespace, containing the specified key-value pair. You can then reference this secret in your Kubernetes resources, such as pods, by mounting it as a volume or using it as environment variables.
+- `kubectl get secret ` - command is used to retrieve information about secrets in a Kubernetes cluster. 
+- `kubectl describe secret` - command is used to display detailed information about a specific secret in a Kubernetes cluster. 
+- `kubectl get secrets pg-secret --template={{.data.PASSWORD}}` - the command you provided uses the kubectl get command with a custom template to extract the value of the PASSWORD key from the pg-secret secret.
+- `kubectl get secret pg-secret --template='{{.data.PASSWORD}}' | base64 --decode` - get the secret
+- `kubectl delete secrets <secret-name>` - delete the secret 
 
 
 #### Munukube commands
