@@ -2,8 +2,6 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: myingress
-  labels:
-    name: myingress
   annotations:
     nginx.ingress.kubernetes.io/add-base-url: "true"
 spec:
@@ -24,5 +22,6 @@ spec:
         backend:
           service:
             name: short-api-clusterip
-            port: 
+            port:
               number: 3000
+# /api

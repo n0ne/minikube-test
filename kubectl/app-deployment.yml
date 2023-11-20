@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: short-app
-          image: antonlarichev/short-app:v1.4
+          image: antonlarichev/short-app:v1.0
           # imagePullPolicy: Always   # will always pull the new image, better use tag, not latest
           ports:
             - containerPort: 80
