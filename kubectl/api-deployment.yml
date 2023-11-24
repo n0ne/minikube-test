@@ -20,7 +20,7 @@ spec:
           resources:
             limits:
               memory: "500Mi"
-              cpu: "200m"
+              cpu: "1000m"
           env:
             - name: DATABASE_URL
               valueFrom:
