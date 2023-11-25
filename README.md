@@ -41,6 +41,14 @@
 - `kubectl get secrets pg-secret --template={{.data.PASSWORD}}` - the command you provided uses the kubectl get command with a custom template to extract the value of the PASSWORD key from the pg-secret secret.
 - `kubectl get secret pg-secret --template='{{.data.PASSWORD}}' | base64 --decode` - get the secret
 - `kubectl delete secrets <secret-name>` - delete the secret 
+- `kubectl exec -it <pod-name> -- /bin/bash` - command allows you to execute commands in a running container. 
+- `kubectl describe configmaps demo-config` - describe configmaps in a Kubernetes cluster
+- `kubectl rollout undo deployment <deployment-name> --ti-revision=<revision-version>` - his command will roll back the deployment named <deployment-name> to revision <revision-version>.
+- `kubectl get namespaces` - get the list of namespaces in a Kubernetes cluster
+- `kubectl get pods -n <namespace-name>` - the correct syntax for listing pods in a specific namespace
+- `kubectl config set-context --current --namespace=<namespace-name>` - this command sets the namespace for the current context to <namespace-name>
+- `kubectl api-resources --namespaced=false` - command lists API resources that are not namespaced, meaning they are cluster-wide resources. These resources are applicable to the entire Kubernetes cluster and are not confined to a specific namespace.
+- `kubectl apply -f <yml-file> -n <namespace-name>` - apply file in specific namespace
 
 
 #### Munukube commands
