@@ -26,7 +26,7 @@
 - `kubectl delete service short-app-port` - delete the service with name `short-app-port`
 - `kubectl delete deployments <deployment-name>` - delete deployment from Kubernetes cluster
 - `kubectl describe pods <pod-name>` - command is used to retrieve detailed information about a specific pod in a Kubernetes cluster.
-- `kubectl describe service short-app-port` - command is used to retrieve detailed information about a specific service in a Kubernetes cluster. 
+- `kubectl describe service <service-name>` - command is used to retrieve detailed information about a specific service in a Kubernetes cluster. 
 - `kubectl describe deployments.apps <deployment-name>` - command is used to get detailed information about a specific Deployment in Kubernetes. 
 - `kubectl logs <pod-name>` - command is used to retrieve the logs of a specific pod in a Kubernetes cluster.
 - `kubectl rollout history deployment <deployment-name>` - command to view the rollout history of a deployment in Kubernetes using kubectl
@@ -62,3 +62,4 @@
 - `minikube tunnel` - command is used to create a route to services deployed in a Minikube cluster. It sets up a network tunnel to expose LoadBalancer services to your local machine. This is especially useful when you have services of type LoadBalancer that you want to access from your local environment.
 - `minikube addons list` - this command will display a list of available addons along with their status (enabled or disabled).
 - ` minikube addons enable <addon-name>` - enable minikube addon
+- 
