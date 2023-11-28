@@ -31,31 +31,31 @@ spec:
             - name: test
               mountPath: /etc/test
               readOnly: true
-          livenessProbe:
-            exec:
-              command:
-                - curl
-                - --fail
-                - http://localhost:3000/api
-            initialDelaySeconds: 100
-            periodSeconds: 5
-            failureThreshold: 1
-          startupProbe:
-            exec:
-              command:
-                - curl
-                - --fail
-                - http://localhost:3000/api
-            periodSeconds: 10
-            failureThreshold: 5
-          readinessProbe:
-            exec:
-              command:
-                - curl
-                - --fail
-                - http://localhost:3000/api
-            periodSeconds: 10 
-            initialDelaySeconds: 10
+          # livenessProbe:
+          #   exec:
+          #     command:
+          #       - curl
+          #       - --fail
+          #       - http://localhost:3000/api
+          #   initialDelaySeconds: 100
+          #   periodSeconds: 5
+          #   failureThreshold: 1
+          # startupProbe:
+          #   exec:
+          #     command:
+          #       - curl
+          #       - --fail
+          #       - http://localhost:3000/api
+          #   periodSeconds: 10
+          #   failureThreshold: 5
+          # readinessProbe:
+          #   exec:
+          #     command:
+          #       - curl
+          #       - --fail
+          #       - http://localhost:3000/api
+          #   periodSeconds: 10 
+          #   initialDelaySeconds: 10
       volumes:
       - name: test
         configMap:

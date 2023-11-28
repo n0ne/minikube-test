@@ -62,4 +62,12 @@
 - `minikube tunnel` - command is used to create a route to services deployed in a Minikube cluster. It sets up a network tunnel to expose LoadBalancer services to your local machine. This is especially useful when you have services of type LoadBalancer that you want to access from your local environment.
 - `minikube addons list` - this command will display a list of available addons along with their status (enabled or disabled).
 - ` minikube addons enable <addon-name>` - enable minikube addon
-- 
+
+
+#### Helm
+- `helm repo list` - command is used to list the configured Helm repositories on your system
+- `helm repo add stable https://charts.helm.sh/stable` - add stabe repo for charts
+- `helm repo update` - command is used to update existing stable charts
+- `helm install <chart-name> --generate-name` - command is used to install a Helm chart with an automatically generated release name.
+- `helm show chart <chart-name>` - command is used to display the contents of a Helm chart
+- `helm show all stable/mysql` - command is used to display all information about a Helm chart, including its chart metadata, values, and README.
