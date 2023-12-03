@@ -71,3 +71,7 @@
 - `helm install <chart-name> --generate-name` - command is used to install a Helm chart with an automatically generated release name.
 - `helm show chart <chart-name>` - command is used to display the contents of a Helm chart
 - `helm show all stable/mysql` - command is used to display all information about a Helm chart, including its chart metadata, values, and README.
+- `helm install <release_name> <charts>` - In Helm 3 and later versions, when you install a chart, you provide the release name after the helm install command and then specify the chart name. `<charts>` - can be folder with charts
+- `helm ls` - command is used to list releases in a Kubernetes cluster.
+- `helm install --debug --dry-run <release_name> charts` - This command will not deploy the release but will give you a preview of what would happen during installation. It's a helpful way to validate your Helm chart before actually applying it to your Kubernetes cluster.
+- `helm install --debug --dry-run short-service-release --set name=Sad_boo./short-service` - the same like previous command, but set value to variable `name`
